@@ -1,0 +1,48 @@
+{
+  "name": "NanoAlsa Corporate Website",
+  "description": "Modern React-based static website for NanoAlsa, a Chilean company specializing in high-purity nanometals (Copper and Silver only)",
+  "version": "1.0.0",
+  "framework": "React + Vite",
+  "type": "static-website",
+  "stack": {
+    "frontend": "React 18.2",
+    "bundler": "Vite 4.4",
+    "styling": "Tailwind CSS 3.3",
+    "animations": "Framer Motion 10.16",
+    "icons": "React Icons 4.11"
+  },
+  "commands": {
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "preview": "npm run preview",
+    "lint": "npm run lint",
+    "install": "npm install"
+  },
+  "project_rules": {
+    "products_only": ["Nano Copper (Cu)", "Nano Silver (Ag)"],
+    "no_database": true,
+    "static_only": true,
+    "offline_first": true,
+    "content_source": "src/data/content.js",
+    "tagline": "Nanometales de Alta Pureza",
+    "icons_source": "React Icons only - no external CDNs"
+  },
+  "key_directories": {
+    "components": "src/components/",
+    "data": "src/data/",
+    "images": "public/images/",
+    "sections": "src/components/sections/",
+    "utils": "src/utils/"
+  },
+  "performance_targets": {
+    "lighthouse_score": ">95",
+    "fps": "60",
+    "load_time": "<3s"
+  },
+  "contact": {
+    "client": "José Antonio Cox",
+    "email": "jacox@nanoalsa.com",
+    "company": "NanoAlsa",
+    "location": "Santiago, Chile"
+  }
+}

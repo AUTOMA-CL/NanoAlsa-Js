@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1e40af;
+  --color-secondary: #64748b;
+  --color-accent: #3b82f6;
+  --color-copper: #ea580c;
+  --color-silver: #94a3b8;
+  --gradient-corporate: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --shadow-corporate: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-corporate-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body, html {
+    @apply antialiased text-corporate-700 leading-relaxed m-0 p-0 w-full;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  #root {
+    @apply w-full m-0 p-0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-corporate-900;
+  }
+
+  /* Corporate Typography Scale */
+  .text-display-2xl {
+    @apply text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl;
+  }
+
+  .text-display-xl {
+    @apply text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl;
+  }
+
+  .text-display-lg {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl;
+  }
+
+  .text-display-md {
+    @apply text-2xl font-semibold tracking-tight sm:text-3xl;
+  }
+
+  .text-display-sm {
+    @apply text-xl font-semibold tracking-tight sm:text-2xl;
+  }
+
+  .text-display-xs {
+    @apply text-lg font-semibold tracking-tight sm:text-xl;
+  }
+}
+
+@layer components {
+  /* Corporate Button Styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-nano-blue-600 text-white hover:bg-nano-blue-700 focus:ring-nano-blue-500 shadow-corporate;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-corporate-700 border border-corporate-300 hover:bg-corporate-50 focus:ring-corporate-500 shadow-corporate;
+  }
+
+  .btn-ghost {
+    @apply text-corporate-600 hover:text-corporate-900 hover:bg-corporate-100 focus:ring-corporate-500;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-lg;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  /* Corporate Card Styles */
+  .card {
+    @apply bg-white rounded-xl shadow-corporate border border-corporate-200/50;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-corporate-lg hover:-translate-y-1 hover:border-corporate-300/50;
+  }
+
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+
+  /* Corporate Section Styles */
+  .section {
+    @apply py-24 sm:py-32;
+  }
+
+  .section-sm {
+    @apply py-16 sm:py-20;
+  }
+
+  .section-lg {
+    @apply py-32 sm:py-40;
+  }
+
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-sm {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Gradient Backgrounds */
+  .gradient-primary {
+    background: var(--gradient-corporate);
+  }
+
+  .gradient-dark {
+    background: var(--gradient-dark);
+  }
+
+  .gradient-mesh {
+    background: radial-gradient(circle at 20% 50%, rgba(30, 64, 175, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(234, 88, 12, 0.1) 0%, transparent 50%);
+  }
+
+  /* Corporate Navigation */
+  .nav-link {
+    @apply text-corporate-600 hover:text-corporate-900 font-medium transition-colors duration-200 relative;
+  }
+
+  .nav-link:hover::after {
+    @apply absolute bottom-0 left-0 right-0 h-0.5 bg-nano-blue-600 transform scale-x-100;
+  }
+
+  .nav-link::after {
+    @apply absolute bottom-0 left-0 right-0 h-0.5 bg-nano-blue-600 transform scale-x-0 transition-transform duration-200;
+    content: '';
+  }
+
+  /* Corporate Stats */
+  .stat-card {
+    @apply text-center p-8 rounded-xl bg-white shadow-corporate border border-corporate-200/50;
+  }
+
+  .stat-number {
+    @apply text-4xl font-bold text-nano-blue-600 mb-2;
+  }
+
+  .stat-label {
+    @apply text-corporate-600 font-medium;
+  }
+
+  /* Corporate Features */
+  .feature-icon {
+    @apply w-12 h-12 bg-nano-blue-100 text-nano-blue-600 rounded-lg flex items-center justify-center mb-4;
+  }
+
+  .feature-title {
+    @apply text-xl font-semibold text-corporate-900 mb-2;
+  }
+
+  .feature-description {
+    @apply text-corporate-600 leading-relaxed;
+  }
+
+  /* Corporate Testimonials */
+  .testimonial {
+    @apply bg-white p-8 rounded-xl shadow-corporate border border-corporate-200/50;
+  }
+
+  .testimonial-quote {
+    @apply text-lg text-corporate-700 italic mb-6;
+  }
+
+  .testimonial-author {
+    @apply font-semibold text-corporate-900;
+  }
+
+  .testimonial-role {
+    @apply text-corporate-600 text-sm;
+  }
+}
+
+@layer utilities {
+  /* Corporate spacing utilities */
+  .space-y-section > * + * {
+    @apply mt-24 sm:mt-32;
+  }
+
+  .space-y-content > * + * {
+    @apply mt-6;
+  }
+
+  /* Corporate text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Corporate animation utilities */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Corporate focus utilities */
+  .focus-corporate {
+    @apply focus:outline-none focus:ring-2 focus:ring-nano-blue-500 focus:ring-offset-2;
+  }
+
+  /* Corporate scrollbar */
+  .scrollbar-corporate {
+    scrollbar-width: thin;
+    scrollbar-color: #3b82f6 #e2e8f0;
+  }
+
+  .scrollbar-corporate::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-corporate::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 3px;
+  }
+
+  .scrollbar-corporate::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 3px;
+  }
+
+  .scrollbar-corporate::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(claude mcp add:*)",
+      "Read(//c/Users/Ignacio Peña/Documents/Proyectos/NanoCL/Docs/**)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "mcp__Ref__ref_search_documentation",
+      "mcp__Ref__ref_read_url",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "Bash(cat:*)",
+      "Read(//c/Users/Ignacio Peña/Documents/NanoCL/Docs/Presentancion Nano Cobre/CERTIFICADOS//**)",
+      "Bash(sed:*)",
+      "mcp__playwright__browser_click",
+      "Read(//c/REPOSITORY/WEBSITES/NanoAlsa Corporate/**)",
+      "Read(//c/REPOSITORY/WEBSITES/NanoAlsa JS/**)",
+      "Bash(pkill:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Read(//c/Users/Ignacio Peña/Documents/NanoCL/Docs/**)",
+      "Bash(tree:*)",
+      "Bash(npm create:*)",
+      "Bash(npx astro add:*)",
+      "Bash(npm install:*)",
+      "Bash(node:*)",
+      "mcp__playwright__browser_snapshot",
+      "Bash(git reset:*)",
+      "Bash(git init:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

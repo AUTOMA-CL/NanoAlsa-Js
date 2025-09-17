@@ -16,7 +16,7 @@ export const companyInfo = {
 
 export const heroStats = [
   {
-    value: '99.99%',
+    value: '99.98%',
     label: 'Pureza Superior',
     description: 'Nanometales con pureza excepcional certificada por STEWART'
   },
@@ -47,10 +47,10 @@ export const products = [
     gradient: 'from-orange-500 to-red-600',
     image: '/images/nanocobre-latest.png',
     characteristics: [
-      { label: 'Tamaño', value: '<20nm', highlight: true },
-      { label: 'Pureza', value: '99.998-99.999%', highlight: true },
-      { label: 'Valencia', value: '99.9-100% Cu0', highlight: false },
-      { label: 'Potencial Zeta', value: 'Positivo', highlight: false },
+      { label: 'Tamaño', value: '5 - 90 nm', highlight: true },
+      { label: 'Pureza', value: '99.987%', highlight: true },
+      { label: 'Distribución Principal', value: '79% en 30 - 60 nm', highlight: true },
+      { label: 'Morfología', value: 'Esférica', highlight: true },
       { label: 'Punto de Fusión', value: '<39°C', highlight: true },
       { label: 'Morfología', value: 'Esférica uniforme', highlight: false },
       { label: 'Estabilidad', value: 'Alta dispersión', highlight: false },
@@ -77,11 +77,11 @@ export const products = [
     gradient: 'from-slate-400 to-slate-600',
     image: '/images/nanoplata.png',
     characteristics: [
-      { label: 'Tamaño Promedio', value: '9,5 ± 4 nm', highlight: true },
-      { label: 'Peak de Distribución', value: '8,1 ± 0,2 nm', highlight: true },
+      { label: 'Tamaño Promedio', value: 'Esférica', highlight: true },
+      { label: 'Pureza', value: '99.987%', highlight: true },
       { label: 'Distribución Principal', value: '62% entre 5-10 nm', highlight: true },
-      { label: 'Rango Total', value: '50% entre 6,8-10,9 nm', highlight: false },
-      { label: 'Morfología', value: 'Esferoides uniformes', highlight: false },
+      { label: 'Morfología', value: 'Esférica', highlight: true },
+      { label: 'Morfología', value: 'Esférica', highlight: true },
       { label: 'Dispersión', value: 'Baja (homogénea)', highlight: true },
       { label: 'Análisis Estadístico', value: '101 partículas medidas', highlight: false },
       { label: 'Confianza', value: '95% estadística', highlight: true }
@@ -123,7 +123,7 @@ export const competitiveAdvantage = {
     {
       feature: 'Pureza del Metal',
       standard: '<99.90%',
-      nanoalsa: '99.998-99.999%',
+      nanoalsa: '99.98%',
       improvement: '0.1% superior',
       impact: 'Eliminación total de impurezas críticas'
     },

@@ -86,7 +86,7 @@ const Research = () => {
             Tecnología de Vanguardia
           </h3>
           <p className="text-corporate-600 mb-6">
-            NanoAlsa ha desarrollado sus nanometales a partir de tecnología propia, utilizando procesos 100% libres de contaminación que garantizan la máxima pureza y calidad en cada partícula producida. Nuestra innovación representa un avance significativo en la industria nanotecnológica mundial.
+            NanoAlsa ha desarrollado sus nanometales a partir de tecnología propia, utilizando procesos utilizando un proceso <span className="font-bold text-nano-blue-600">único en la industria</span>, a partir de la micromolienda electrónica, 100% libres de contaminación que garantizan la máxima pureza y calidad en cada partícula producida. Nuestra innovación representa un avance significativo en la industria nanotecnológica mundial.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">

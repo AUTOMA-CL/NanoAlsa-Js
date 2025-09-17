@@ -40,7 +40,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-start justify-center pt-16 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-corporate-50/30 to-nano-blue-50/50" />
@@ -65,7 +65,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="container relative">
+      <div className="container relative mt-16">
         <div className="max-w-4xl">
           <motion.div
             variants={containerVariants}
@@ -99,16 +99,6 @@ const Hero = () => {
                 Explorar Productos
                 <HiChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
-
-              <motion.button
-                onClick={() => handleCTAClick('#about')}
-                className="btn btn-secondary btn-lg group"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <HiPlay className="mr-2 w-5 h-5" />
-                Ver Presentación
-              </motion.button>
             </motion.div>
 
             {/* Trust Indicators */}
@@ -119,8 +109,6 @@ const Hero = () => {
               <div className="flex items-center space-x-8 opacity-60">
                 <div className="text-sm font-medium text-corporate-600">PUC</div>
                 <div className="text-sm font-medium text-corporate-600">USACH</div>
-                <div className="text-sm font-medium text-corporate-600">Universidad de Chile</div>
-                <div className="text-sm font-medium text-corporate-600">ISO 9001</div>
               </div>
             </motion.div>
           </motion.div>

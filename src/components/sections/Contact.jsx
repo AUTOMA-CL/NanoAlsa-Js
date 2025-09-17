@@ -4,6 +4,18 @@ import { HiUser, HiMail, HiLocationMarker, HiBriefcase, HiPhone } from 'react-ic
 import { companyInfo, technicalSpecs } from '../../data/content';
 
 const Contact = () => {
+  const handleProductsClick = () => {
+    const element = document.querySelector('#products');
+    if (element) {
+      const headerHeight = 80;
+      const elementPosition = element.offsetTop - headerHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="contact" className="section">
       <div className="container">
@@ -145,7 +157,10 @@ const Contact = () => {
             >
               Contactar Ahora
             </a>
-            <button className="btn btn-ghost text-white border-white hover:bg-white/10">
+            <button
+              onClick={handleProductsClick}
+              className="btn btn-ghost text-white border-white hover:bg-white/10"
+            >
               Ver Productos
             </button>
           </div>

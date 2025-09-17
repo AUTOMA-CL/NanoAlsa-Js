@@ -17,7 +17,6 @@
       "Read(//c/Users/Ignacio Peña/Documents/NanoCL/Docs/Presentancion Nano Cobre/CERTIFICADOS//**)",
       "Bash(sed:*)",
       "mcp__playwright__browser_click",
-      "Read(//c/REPOSITORY/WEBSITES/NanoAlsa Corporate/**)",
       "Read(//c/REPOSITORY/WEBSITES/NanoAlsa JS/**)",
       "Bash(pkill:*)",
       "Bash(git add:*)",
@@ -35,7 +34,9 @@
       "Bash(git reset:*)",
       "Bash(git init:*)",
       "Bash(git branch:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(git pull:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []

@@ -20,7 +20,7 @@ const Research = () => {
       icon: HiLightningBolt,
       title: 'Pureza Superior',
       description: 'Nanometales con pureza excepcional certificada por universidades',
-      metrics: '99.99% pureza'
+      metrics: '99.987% pureza'
     },
     {
       icon: HiGlobe,
@@ -98,7 +98,7 @@ const Research = () => {
               <div className="text-sm text-corporate-600">Contaminación</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-nano-blue-600 mb-2">99.99%</div>
+              <div className="text-3xl font-bold text-nano-blue-600 mb-2">99.987%</div>
               <div className="text-sm text-corporate-600">Pureza Máxima</div>
             </div>
           </div>

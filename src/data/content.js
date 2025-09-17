@@ -10,7 +10,6 @@ export const companyInfo = {
   specialization: 'Nanometales para industrias críticas',
   foundedYear: '2018',
   employeeCount: '25+',
-  certificationCount: '15+',
   industriesServed: '6'
 };
 
@@ -21,7 +20,7 @@ export const heroStats = [
     description: 'Nanometales con pureza excepcional certificada por STEWART'
   },
   {
-    value: '<20nm',
+    value: '<90 nm',
     label: 'Precisión Nanométrica',
     description: 'Tamaño de partícula ultra controlado'
   },
@@ -30,11 +29,6 @@ export const heroStats = [
     label: 'Industrias Críticas',
     description: 'Sectores de alta tecnología atendidos'
   },
-  {
-    value: '15+',
-    label: 'Certificaciones',
-    description: 'Validaciones científicas internacionales'
-  }
 ];
 
 export const products = [
@@ -49,8 +43,8 @@ export const products = [
     characteristics: [
       { label: 'Tamaño', value: '5 - 90 nm', highlight: true },
       { label: 'Pureza', value: '99.987%', highlight: true },
-      { label: 'Distribución Principal', value: '79% en 30 - 60 nm', highlight: true },
-      { label: 'Morfología', value: 'Esférica', highlight: true },
+      { label: 'Distribución Principal', value: '79% en 30-60 nm', highlight: true },
+      { label: 'Morfología', value: '<25 nm', highlight: true },
       { label: 'Punto de Fusión', value: '<39°C', highlight: true },
       { label: 'Morfología', value: 'Esférica uniforme', highlight: false },
       { label: 'Estabilidad', value: 'Alta dispersión', highlight: false },

@@ -67,7 +67,7 @@ const About = () => {
                 viewport={{ once: true }}
               >
                 {[
-                  'Pureza superior al 99.99% garantizada',
+                  'Pureza superior al 99.987% garantizada',
                   'Procesos ecológicos y sustentables',
                   'Escalabilidad desde laboratorio hasta producción industrial',
                   'Soporte técnico especializado 24/7'
@@ -140,7 +140,7 @@ const About = () => {
                 transition={{ delay: 0.8, type: "spring", stiffness: 100 }}
                 viewport={{ once: true }}
               >
-                <div className="text-2xl font-bold text-nano-blue-600">99.99%</div>
+                <div className="text-2xl font-bold text-nano-blue-600">99.987%</div>
                 <div className="text-sm text-corporate-600">Pureza Máxima</div>
               </motion.div>
 
@@ -151,7 +151,7 @@ const About = () => {
                 transition={{ delay: 1, type: "spring", stiffness: 100 }}
                 viewport={{ once: true }}
               >
-                <div className="text-2xl font-bold text-nano-copper-600">&lt;20nm</div>
+                <div className="text-2xl font-bold text-nano-copper-600">&lt;90 nm</div>
                 <div className="text-sm text-corporate-600">Precisión</div>
               </motion.div>
             </div>

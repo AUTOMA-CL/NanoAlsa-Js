@@ -17,7 +17,7 @@ const Certifications = () => {
           product: 'Nano Cobre (Cu)',
           url: '/certificates/Analisis de Pureza Nano Cobre.pdf',
           icon: RiMedalLine,
-          highlights: ['Pureza 99.999%', 'Tamaño <20nm', 'Valencia Cu0']
+          highlights: ['Pureza 99.987%', 'Tamaño <90 nm', 'Valencia Cu0']
         }
       ]
     },
@@ -54,7 +54,7 @@ const Certifications = () => {
           product: 'Nano Plata (Ag)',
           url: '/certificates/Universidad de Chile Nano Plata.pdf',
           icon: HiAcademicCap,
-          highlights: ['Propiedades antimicrobianas', 'Conductividad', 'Pureza 99.99%']
+          highlights: ['Propiedades antimicrobianas', 'Conductividad', 'Pureza 99.987%']
         }
       ]
     }
@@ -104,11 +104,11 @@ const Certifications = () => {
               <div className="text-sm text-nano-blue-600">Instituciones</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-nano-blue-700">99.99%</div>
+              <div className="text-3xl font-bold text-nano-blue-700">99.987%</div>
               <div className="text-sm text-nano-blue-600">Pureza Máxima</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-nano-blue-700">&lt;20nm</div>
+              <div className="text-3xl font-bold text-nano-blue-700">&lt;90 nm</div>
               <div className="text-sm text-nano-blue-600">Tamaño Partícula</div>
             </div>
           </div>

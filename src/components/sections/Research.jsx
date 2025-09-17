@@ -1,106 +1,107 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { HiDownload, HiDocumentText } from 'react-icons/hi';
+import { HiBeaker, HiCog, HiLightningBolt, HiGlobe } from 'react-icons/hi';
 
 const Research = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-
-  const documents = [
+  const capabilities = [
     {
-      id: 1,
-      title: 'Propiedades del Nano Cobre',
-      description: 'Estudio detallado de las propiedades físicas y químicas del nano cobre.',
-      type: 'PDF',
-      size: '2.5 MB'
+      icon: HiBeaker,
+      title: 'Tecnología Propia',
+      description: 'Desarrollo 100% propio de procesos de síntesis nanométrica',
+      metrics: 'Patentes registradas'
     },
     {
-      id: 2,
-      title: 'Aplicaciones de Nano Plata',
-      description: 'Investigación sobre aplicaciones industriales y médicas de la nano plata.',
-      type: 'PDF',
-      size: '3.1 MB'
+      icon: HiCog,
+      title: 'Libre de Contaminación',
+      description: 'Procesos completamente limpios sin contaminantes químicos',
+      metrics: '0% contaminación'
     },
     {
-      id: 3,
-      title: 'Métodos de Síntesis',
-      description: 'Documentación técnica sobre procesos de producción de nanometales.',
-      type: 'PDF',
-      size: '4.2 MB'
+      icon: HiLightningBolt,
+      title: 'Pureza Superior',
+      description: 'Nanometales con pureza excepcional certificada por universidades',
+      metrics: '99.99% pureza'
+    },
+    {
+      icon: HiGlobe,
+      title: 'Innovación Verde',
+      description: 'Proceso físico mecánico sin intervención de químicos',
+      metrics: 'Eco-friendly'
     }
   ];
 
   return (
-    <section id="research" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="research" className="section bg-corporate-50/30">
+      <div className="container">
         <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Investigación y Desarrollo
+          <h2 className="text-display-lg mb-6">
+            Desarrollo <span className="text-nano-blue-600">NanoAlsa</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Accede a nuestra documentación técnica y estudios de investigación
+          <p className="text-xl text-corporate-600 max-w-3xl mx-auto">
+            Tecnología propia desarrollada con los más altos estándares de pureza y calidad
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {documents.map((doc, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {capabilities.map((capability, index) => (
             <motion.div
-              key={doc.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5 }}
+              className="text-center"
             >
-              <div className="flex items-center mb-4">
-                <HiDocumentText className="w-8 h-8 text-blue-600 mr-3" />
-                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-medium">
-                  {doc.type}
-                </span>
+              <div className="w-16 h-16 bg-nano-blue-100 text-nano-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <capability.icon className="w-8 h-8" />
               </div>
-
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
-                {doc.title}
+              <h3 className="text-lg font-bold text-corporate-900 mb-2">
+                {capability.title}
               </h3>
-
-              <p className="text-gray-600 mb-4">
-                {doc.description}
+              <p className="text-corporate-600 mb-3">
+                {capability.description}
               </p>
-
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500">{doc.size}</span>
-                <button className="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-300">
-                  <HiDownload className="w-4 h-4 mr-2" />
-                  Descargar
-                </button>
+              <div className="text-sm font-medium text-nano-blue-600">
+                {capability.metrics}
               </div>
             </motion.div>
           ))}
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-16 bg-white rounded-2xl p-8 shadow-corporate text-center"
         >
-          <p className="text-gray-600 mb-6">
-            ¿Necesitas documentación específica o información técnica adicional?
+          <h3 className="text-2xl font-bold text-corporate-900 mb-4">
+            Tecnología de Vanguardia
+          </h3>
+          <p className="text-corporate-600 mb-6">
+            NanoAlsa ha desarrollado sus nanometales a partir de tecnología propia, utilizando procesos 100% libres de contaminación que garantizan la máxima pureza y calidad en cada partícula producida. Nuestra innovación representa un avance significativo en la industria nanotecnológica mundial.
           </p>
-          <a
-            href="#contact"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300"
-          >
-            Contacta con Nuestros Expertos
-          </a>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-nano-blue-600 mb-2">100%</div>
+              <div className="text-sm text-corporate-600">Tecnología Propia</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-nano-blue-600 mb-2">0%</div>
+              <div className="text-sm text-corporate-600">Contaminación</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-nano-blue-600 mb-2">99.99%</div>
+              <div className="text-sm text-corporate-600">Pureza Máxima</div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -17,7 +17,6 @@
       "Read(//c/Users/Ignacio Peña/Documents/NanoCL/Docs/Presentancion Nano Cobre/CERTIFICADOS//**)",
       "Bash(sed:*)",
       "mcp__playwright__browser_click",
-      "Read(//c/REPOSITORY/WEBSITES/NanoAlsa Corporate/**)",
       "Read(//c/REPOSITORY/WEBSITES/NanoAlsa JS/**)",
       "Bash(pkill:*)",
       "Bash(git add:*)",
@@ -26,14 +25,8 @@
       "Bash(git push:*)",
       "Bash(git remote set-url:*)",
       "Read(//c/Users/Ignacio Peña/Documents/NanoCL/Docs/**)",
-      "Bash(tree:*)",
-      "Bash(npm create:*)",
-      "Bash(npx astro add:*)",
-      "Bash(npm install:*)",
-      "Bash(node:*)",
-      "mcp__playwright__browser_snapshot",
-      "Bash(git reset:*)",
-      "Bash(git init:*)"
+      "Bash(git pull:*)",
+      "Bash(git merge:*)"
     ],
     "deny": [],
     "ask": []

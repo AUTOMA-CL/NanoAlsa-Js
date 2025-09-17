@@ -1,100 +1,89 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { HiShieldCheck, HiLightningBolt, HiStar, HiBeaker, HiOfficeBuilding, HiHeart } from 'react-icons/hi';
+import { industries } from '../../data/content';
 
 const Industries = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-
-  const industries = [
-    {
-      id: 1,
-      name: 'Defensa y Seguridad',
-      description: 'Aplicaciones especializadas en sistemas de defensa y equipos de seguridad avanzados.',
-      icon: '🛡️',
-      color: 'from-red-500 to-red-600'
-    },
-    {
-      id: 2,
-      name: 'Aeroespacial',
-      description: 'Componentes de alta performance para la industria aeronáutica y espacial.',
-      icon: '🚀',
-      color: 'from-blue-500 to-blue-600'
-    },
-    {
-      id: 3,
-      name: 'Energía',
-      description: 'Soluciones para sistemas de energía renovable y almacenamiento eficiente.',
-      icon: '⚡',
-      color: 'from-green-500 to-green-600'
-    },
-    {
-      id: 4,
-      name: 'Electrónica',
-      description: 'Materiales conductivos para dispositivos electrónicos de nueva generación.',
-      icon: '💻',
-      color: 'from-purple-500 to-purple-600'
-    },
-    {
-      id: 5,
-      name: 'Catálisis',
-      description: 'Catalizadores avanzados para procesos químicos e industriales eficientes.',
-      icon: '⚗️',
-      color: 'from-indigo-500 to-indigo-600'
-    },
-    {
-      id: 6,
-      name: 'Medicina',
-      description: 'Aplicaciones biomédicas con propiedades antimicrobianas y biocompatibles.',
-      icon: '🏥',
-      color: 'from-teal-500 to-teal-600'
-    }
-  ];
+  const iconMap = {
+    shield: HiShieldCheck,
+    rocket: HiLightningBolt,
+    battery: HiStar,
+    microchip: HiStar,
+    flask: HiBeaker,
+    hospital: HiHeart
+  };
 
   return (
-    <section id="industries" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="industries" className="section bg-corporate-50/30">
+      <div className="container">
         <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Industrias que Atendemos
+          <h2 className="text-display-lg mb-6">
+            Industrias <span className="text-nano-blue-600">Críticas</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nuestros nanometales tienen aplicaciones en múltiples sectores industriales
+          <p className="text-xl text-corporate-600 max-w-3xl mx-auto">
+            Soluciones especializadas para los sectores más exigentes del mundo
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (
-            <motion.div
-              key={industry.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="bg-white rounded-xl shadow-lg p-6 h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <span className="text-2xl">{industry.icon}</span>
-                </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {industries.map((industry, index) => {
+            const IconComponent = iconMap[industry.icon];
 
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+            return (
+              <motion.div
+                key={industry.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                viewport={{ once: true }}
+                whileHover={{
+                  y: -8,
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                  backgroundColor: "#ffffff"
+                }}
+                className="bg-white rounded-xl border border-corporate-200/50 p-6 cursor-pointer transition-none"
+                style={{ boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)" }}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.15, rotate: 8 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${industry.gradient} text-white flex items-center justify-center mb-4`}
+                >
+                  <IconComponent className="w-6 h-6" />
+                </motion.div>
+
+                <h3 className="text-xl font-bold text-corporate-900 mb-2">
                   {industry.name}
                 </h3>
-
-                <p className="text-gray-600">
-                  {industry.description}
+                <p className="text-corporate-600 text-sm mb-4">
+                  {industry.subtitle}
                 </p>
-              </div>
-            </motion.div>
-          ))}
+
+                <div className="space-y-2">
+                  {industry.applications.slice(0, 3).map((app, appIndex) => (
+                    <div key={appIndex} className="text-sm text-corporate-600 flex items-start">
+                      <span className="w-1.5 h-1.5 bg-nano-blue-600 rounded-full mt-2 mr-2 flex-shrink-0" />
+                      {app}
+                    </div>
+                  ))}
+                </div>
+
+                {industry.casestudy && (
+                  <div className="mt-4 pt-4 border-t border-corporate-200">
+                    <div className="text-xs text-nano-blue-600 font-medium">
+                      {industry.casestudy.title}
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
